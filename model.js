@@ -20,7 +20,7 @@ var model = {
         { isLeftSide: false, index: 1, type: 1 },
         { isLeftSide: false, index: 2, type: 1 },
         { isLeftSide: false, index: 3, type: 1 },
-        { isLeftSide: false, index: 4, type: 0 },
+        { isLeftSide: false, index: 4, type: 1 },
     ],
 };
 
