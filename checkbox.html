@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checkbox {
+            border: 2px solid black;
+            width: 2rem;
+            height: 2rem;
+            display: inline-block;
+            color: green;
+            font-size: 150%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .checked {
+            background-color: green;
+        }
+
+        .checked::before {
+            position: absolute;
+            margin-left: -0.5rem;
+            color: white;
+            content: "✓";
+        }
+
+        .disabled {
+            background-color: gray;
+            border: 2px solid darkslategrey;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkbox checked"></div>
+    <div class="checkbox"></div>
+    <div class="checkbox disabled"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="model.js"></script>
+</head>
+
+<body>
+    <h1>Pause til 10:35</h1>
+    <div id="app"></div>
+    <script>
+        // view
+        updateView();
+        function updateView() {
+            let html = '';
+            for (let fingerOrToe of model.fingersAndToes) {
+                const side = fingerOrToe.isLeftSide ? 'venstre' : 'høyre';
+                const detail = model.names[fingerOrToe.index];
+                
+                let name;
+                if (Array.isArray(detail)) {
+                    name =  detail[fingerOrToe.type];
+                } else { // anta at detail er tekst
+                    const entity = fingerOrToe.type == 0 ? 'finger' : 'tå';
+                    name = detail + entity;
+                }
+                
+                html += /*HTML*/`
+                    <li>
+                        ${side} ${name}
+                    </li>
+                `;
+            }
+
+            document.getElementById('app').innerHTML = /*HTML*/`
+                ${html}
+            `;
+
+        }
+
+        // controller
+
+    </script>
+</body>
+
+</html>
