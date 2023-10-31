@@ -1,0 +1,27 @@
+.checkbox {
+    border: 2px solid black;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    color: green;
+    font-size: 75%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.checked {
+    background-color: green;
+}
+
+.checked::before {
+    position: absolute;
+    margin-left: -0.25rem;
+    color: white;
+    content: "✓";
+}
+
+.disabled {
+    background-color: gray;
+    border: 2px solid darkslategrey;
+    cursor: default;
+}
